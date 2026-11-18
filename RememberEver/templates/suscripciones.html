@@ -1,0 +1,302 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Cabecera de Insights -->
+<section class="hero-header">
+    <div class="hero-text">
+        <span class="eyebrow">ANÁLISIS DE SUSCRIPCIONES</span>
+        <h1>Haz que cada suscripción valga la pena.</h1>
+        <p>Descubre dónde está concentrada tu lista y conserva solo los servicios que realmente aprovechas.</p>
+    </div>
+    <div class="insights-meta-controls">
+        <select class="filter-dropdown">
+            <option>Noviembre 2026</option>
+            <option>Octubre 2026</option>
+        </select>
+        <div class="data-badge-row">
+            <span class="pill-tag">DATOS DE EJEMPLO</span>
+            <span class="muted-small">6 servicios comparados</span>
+        </div>
+    </div>
+</section>
+
+<!-- Tarjetas Superiores: Recomendación + Total de Horas -->
+<section class="insights-top-grid">
+    <!-- Tarjeta Destacada (Apple TV+) -->
+    <article class="recommended-card">
+        <div class="rec-left">
+            <div class="rec-header">
+                <span class="rec-label">Servicio recomendado este mes</span>
+            </div>
+            <h2>Apple TV+</h2>
+            <p class="rec-desc">32 horas de buenas historias. Tu mejor relación horas por dólar.</p>
+            <div class="rec-actions">
+                <button class="btn-primary-orange btn-inline">Suscribirse</button>
+                <span class="price-tag">$9.99 / mes</span>
+            </div>
+        </div>
+        <div class="rec-right">
+            <span class="best-value-badge">MEJOR VALOR</span>
+            <div class="score-big">
+                <strong>3.20</strong>
+                <span>horas en lista / $</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Tarjeta Total de Horas -->
+    <article class="total-hours-card">
+        <span class="rec-label">Horas totales en tu lista</span>
+        <div class="hours-display">
+            <strong>138</strong>
+            <span>hrs</span>
+        </div>
+        <p class="rec-desc">48 títulos repartidos en 6 plataformas de streaming</p>
+        
+        <!-- Barra segmentada -->
+        <div class="segmented-bar">
+            <span style="width: 30%; background: #ff7a45;" title="Netflix: 42h"></span>
+            <span style="width: 23%; background: #c4b5fd;" title="Apple TV+: 32h"></span>
+            <span style="width: 19%; background: #7dd3c0;" title="Hulu: 26h"></span>
+            <span style="width: 13%; background: #93a8d9;" title="Disney+: 18h"></span>
+            <span style="width: 9%; background: #7b8494;" title="Max: 12h"></span>
+            <span style="width: 6%; background: #4b5563;" title="Prime Video: 8h"></span>
+        </div>
+        <span class="muted-small">Netflix concentra la mayoría: 42 hrs</span>
+    </article>
+</section>
+
+<!-- Sección Central: Tabla Comparativa + Gráfica de Barras -->
+<section class="insights-middle-grid">
+    <!-- Tabla de Comparación -->
+    <article class="panel-card">
+        <div class="panel-header">
+            <div>
+                <h3>Compara tus servicios</h3>
+                <p>Ordenados por puntaje de valor para decidir fácilmente tu próxima suscripción.</p>
+            </div>
+            <span class="count-pill">6 servicios</span>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="services-table">
+                <thead>
+                    <tr>
+                        <th>PLATAFORMA</th>
+                        <th>HORAS PENDIENTES</th>
+                        <th>COSTO MENSUAL</th>
+                        <th>PUNTAJE DE VALOR ↓</th>
+                        <th>SUGERENCIA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-highlight">
+                        <td>
+                            <div class="plat-cell">
+                                <span class="rank-num active-rank">01</span>
+                                <div>
+                                    <strong>Apple TV+</strong>
+                                    <small>8 títulos</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>32 hrs</td>
+                        <td>$9.99</td>
+                        <td>
+                            <div class="score-cell">
+                                <span class="score-val highlight">3.20</span>
+                                <div class="mini-bar"><div style="width: 100%; background: #ff7a45;"></div></div>
+                            </div>
+                        </td>
+                        <td><span class="badge-action badge-sub">Suscribir</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plat-cell">
+                                <span class="rank-num">02</span>
+                                <div>
+                                    <strong>Netflix</strong>
+                                    <small>14 títulos</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>42 hrs</td>
+                        <td>$15.49</td>
+                        <td>
+                            <div class="score-cell">
+                                <span class="score-val highlight">2.71</span>
+                                <div class="mini-bar"><div style="width: 85%; background: #ff7a45;"></div></div>
+                            </div>
+                        </td>
+                        <td><span class="badge-action badge-sub">Suscribir</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plat-cell">
+                                <span class="rank-num">03</span>
+                                <div>
+                                    <strong>Hulu</strong>
+                                    <small>9 títulos</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>26 hrs</td>
+                        <td>$9.99</td>
+                        <td>
+                            <div class="score-cell">
+                                <span class="score-val highlight">2.60</span>
+                                <div class="mini-bar"><div style="width: 81%; background: #ff7a45;"></div></div>
+                            </div>
+                        </td>
+                        <td><span class="badge-action badge-sub">Suscribir</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plat-cell">
+                                <span class="rank-num">04</span>
+                                <div>
+                                    <strong>Disney+</strong>
+                                    <small>7 títulos</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>18 hrs</td>
+                        <td>$10.99</td>
+                        <td>
+                            <div class="score-cell">
+                                <span class="score-val">1.64</span>
+                                <div class="mini-bar"><div style="width: 51%; background: #7b8494;"></div></div>
+                            </div>
+                        </td>
+                        <td><span class="badge-action badge-pause">Pausar</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plat-cell">
+                                <span class="rank-num">05</span>
+                                <div>
+                                    <strong>Prime Video</strong>
+                                    <small>4 títulos</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>8 hrs</td>
+                        <td>$8.99</td>
+                        <td>
+                            <div class="score-cell">
+                                <span class="score-val">0.89</span>
+                                <div class="mini-bar"><div style="width: 28%; background: #7b8494;"></div></div>
+                            </div>
+                        </td>
+                        <td><span class="badge-action badge-pause">Pausar</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plat-cell">
+                                <span class="rank-num">06</span>
+                                <div>
+                                    <strong>Max</strong>
+                                    <small>6 títulos</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>12 hrs</td>
+                        <td>$16.99</td>
+                        <td>
+                            <div class="score-cell">
+                                <span class="score-val">0.71</span>
+                                <div class="mini-bar"><div style="width: 22%; background: #7b8494;"></div></div>
+                            </div>
+                        </td>
+                        <td><span class="badge-action badge-pause">Pausar</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="panel-footnote">Puntaje de valor = horas pendientes en lista ÷ costo mensual (USD). Entre más alto, mejor.</p>
+    </article>
+
+    <!-- Gráfica Horizontal: Dónde vive tu lista -->
+    <article class="panel-card chart-panel">
+        <div class="panel-header">
+            <div>
+                <h3>Dónde está tu lista</h3>
+                <p>Horas pendientes, ordenadas de mayor a menor</p>
+            </div>
+        </div>
+
+        <div class="bar-chart">
+            <div class="bar-row">
+                <span class="bar-label">Netflix</span>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width: 84%; background: #ff7a45;"></div>
+                    <span class="bar-value">42h</span>
+                </div>
+            </div>
+            <div class="bar-row">
+                <span class="bar-label">Apple TV+</span>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width: 64%; background: #c4b5fd;"></div>
+                    <span class="bar-value">32h</span>
+                </div>
+            </div>
+            <div class="bar-row">
+                <span class="bar-label">Hulu</span>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width: 52%; background: #7dd3c0;"></div>
+                    <span class="bar-value">26h</span>
+                </div>
+            </div>
+            <div class="bar-row">
+                <span class="bar-label">Disney+</span>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width: 36%; background: #93a8d9;"></div>
+                    <span class="bar-value">18h</span>
+                </div>
+            </div>
+            <div class="bar-row">
+                <span class="bar-label">Max</span>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width: 24%; background: #7b8494;"></div>
+                    <span class="bar-value">12h</span>
+                </div>
+            </div>
+            <div class="bar-row">
+                <span class="bar-label">Prime Video</span>
+                <div class="bar-track">
+                    <div class="bar-fill" style="width: 16%; background: #6c7585;"></div>
+                    <span class="bar-value">8h</span>
+                </div>
+            </div>
+
+            <div class="chart-axis">
+                <span>0</span>
+                <span>10</span>
+                <span>20</span>
+                <span>30</span>
+                <span>40</span>
+                <span>50</span>
+            </div>
+            <span class="axis-title">HORAS PENDIENTES EN LISTA</span>
+        </div>
+
+        <p class="panel-footnote">Más horas ≠ mejor valor. Compara el costo antes de suscribirte.</p>
+    </article>
+</section>
+
+<!-- Banner Inferior: Rotación Inteligente -->
+<section class="rotation-banner">
+    <div class="rotation-left">
+        <span class="rotation-badge">ROTACIÓN INTELIGENTE</span>
+        <div>
+            <h4>Más historias. Menos suscripciones.</h4>
+            <p>Conserva Apple TV+, Netflix y Hulu. Pausa el resto hasta que crezca tu lista en esas plataformas.</p>
+        </div>
+    </div>
+    <div class="rotation-right">
+        <strong>$36.97</strong>
+        <span>ahorro mensual potencial</span>
+    </div>
+</section>
+{% endblock %}

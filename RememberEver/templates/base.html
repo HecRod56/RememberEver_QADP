@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist — Gestor de Catálogo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="{% url 'dashboard' %}" class="brand">
+                <span class="brand-icon">▶</span>
+                <span class="brand-name">watchlist</span>
+            </a>
+            <nav class="nav-links">
+                <a href="{% url 'dashboard' %}" class="{% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">Inicio</a>
+                <a href="{% url 'catalogo' %}" class="{% if request.resolver_match.url_name == 'catalogo' %}active{% endif %}">Mi biblioteca</a>
+                <a href="{% url 'suscripciones' %}" class="{% if request.resolver_match.url_name == 'suscripciones' %}active{% endif %}">Suscripciones</a>
+            </nav>
+        </div>
+
+        <div class="nav-right">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Buscar títulos, géneros...">
+                <kbd>⌘K</kbd>
+            </div>
+            <button class="icon-btn" title="Notificaciones">🔔</button>
+            <div class="user-profile">
+                <div class="avatar">HM</div>
+                <div class="user-info">
+                    <span class="user-name">Mi Espacio</span>
+                    <span class="user-sub">Catálogo personal</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <span>✓ Todo al día. Tu progreso está sincronizado.</span>
+        <span>Diseñado para organizar tu tiempo de pantalla.</span>
+    </footer>
+</body>
+</html>

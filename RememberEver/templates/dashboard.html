@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero & Métricas -->
+<section class="hero-header">
+    <div class="hero-text">
+        <span class="eyebrow">TU ESPACIO PERSONAL</span>
+        <h1>Una buena noche empieza aquí.</h1>
+        <p>Menos tiempo buscando. Más historias que valen la pena terminar.</p>
+    </div>
+    <div class="hero-stats">
+        <div class="stat-item">
+            <strong>12</strong>
+            <span>En progreso</span>
+        </div>
+        <div class="stat-item">
+            <strong>38</strong>
+            <span>En tu lista</span>
+        </div>
+        <div class="stat-item">
+            <strong>24.5h</strong>
+            <span>Visto este mes</span>
+        </div>
+    </div>
+</section>
+
+<!-- Sección: Continuar viendo -->
+<section class="section-block">
+    <div class="section-header">
+        <div class="section-title-group">
+            <div class="title-row">
+                <h2>Continuar viendo</h2>
+                <span class="count-pill">12</span>
+            </div>
+            <p class="section-sub">Retoma la historia justo donde la dejaste.</p>
+        </div>
+        <div class="section-controls">
+            <a href="#" class="link-muted">Ver todo</a>
+            <button class="circle-btn">‹</button>
+            <button class="circle-btn">›</button>
+        </div>
+    </div>
+
+    <div class="grid-4">
+        <!-- Tarjeta 1 -->
+        <article class="media-card">
+            <div class="poster-box" style="background: linear-gradient(135deg, #0f3d3e, #1a5f63);">
+                <img src="{% static 'img/severance.png' %}" style="width:100%; height:100%; object-fit:cover;">
+                <span class="platform-badge">Apple TV+</span>
+                <button class="play-circle">▶</button>
+            </div>
+            <div class="card-body">
+                <div class="card-top">
+                    <h3>Severance</h3>
+                    <span class="dots">•••</span>
+                </div>
+                <p class="episode-meta">T2 · E5 · Trojan's Horse</p>
+                <div class="progress-info">
+                    <span>5 de 10 episodios</span>
+                    <span>50%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 50%;"></div>
+                </div>
+                <div class="card-footer">
+                    <span>Siguiente episodio listo</span>
+                    <button class="btn-ep">+1 Ep</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Tarjeta 2 -->
+        <article class="media-card">
+            <div class="poster-box" style="background: linear-gradient(135deg, #2b2d42, #4a4e69);">
+                <img src="{% static 'img/theBear.png' %}" style="width:100%; height:100%; object-fit:cover;">
+                <span class="platform-badge">Hulu</span>
+                <button class="play-circle">▶</button>
+            </div>
+            <div class="card-body">
+                <div class="card-top">
+                    <h3>The Bear</h3>
+                    <span class="dots">•••</span>
+                </div>
+                <p class="episode-meta">T3 · E4 · Violet</p>
+                <div class="progress-info">
+                    <span>4 de 10 episodios</span>
+                    <span>40%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 40%;"></div>
+                </div>
+                <div class="card-footer">
+                    <span>Siguiente episodio listo</span>
+                    <button class="btn-ep">+1 Ep</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Tarjeta 3 -->
+        <article class="media-card">
+            <div class="poster-box" style="background: linear-gradient(135deg, #3d1e1e, #6e352c);">
+                <img src="{% static 'img/shogun.png' %}" style="width:100%; height:100%; object-fit:cover;">
+                <span class="platform-badge">Disney+</span>
+                <button class="play-circle">▶</button>
+            </div>
+            <div class="card-body">
+                <div class="card-top">
+                    <h3>Shōgun</h3>
+                    <span class="dots">•••</span>
+                </div>
+                <p class="episode-meta">T1 · E7 · A Stick of Time</p>
+                <div class="progress-info">
+                    <span>7 de 10 episodios</span>
+                    <span>70%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 70%;"></div>
+                </div>
+                <div class="card-footer">
+                    <span>Siguiente episodio listo</span>
+                    <button class="btn-ep">+1 Ep</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Tarjeta 4 -->
+        <article class="media-card">
+            <div class="poster-box" style="background: linear-gradient(135deg, #1b3022, #395b44);">
+                <img src="{% static 'img/tlou.png' %}" style="width:100%; height:100%; object-fit:cover;">
+                <span class="platform-badge">Max</span>
+                <button class="play-circle">▶</button>
+            </div>
+            <div class="card-body">
+                <div class="card-top">
+                    <h3>The Last of Us</h3>
+                    <span class="dots">•••</span>
+                </div>
+                <p class="episode-meta">T1 · E3 · Long, Long Time</p>
+                <div class="progress-info">
+                    <span>3 de 9 episodios</span>
+                    <span>33%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 33%;"></div>
+                </div>
+                <div class="card-footer">
+                    <span>Siguiente episodio listo</span>
+                    <button class="btn-ep">+1 Ep</button>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Sección: Por vencer y Prioridad -->
+<section class="section-block">
+    <div class="section-header">
+        <div class="section-title-group">
+            <h2>Por vencer y Prioridad</h2>
+            <p class="section-sub">Títulos a los que conviene hacerles espacio antes de que salgan del catálogo.</p>
+        </div>
+        <button class="filter-dropdown">☰ Más urgentes primero ⌄</button>
+    </div>
+
+    <div class="grid-3">
+        <!-- Prioridad 1 -->
+        <article class="priority-card">
+            <div class="priority-left">
+                <div class="mini-poster" style="background: linear-gradient(180deg, #d97706, #78350f);">
+                    <img src="{% static 'img/dune2.png' %}" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <span class="service-label">Netflix</span>
+            </div>
+            <div class="priority-right">
+                <span class="status-tag tag-urgent">🕒 Sale en 2 días</span>
+                <h3>Dune: Part Two</h3>
+                <p class="meta-line">2024 · Película · Ciencia Ficción</p>
+                <p class="duration-line">🕒 2h 46m para terminar</p>
+                <button class="btn-primary-orange">+ Ver esta noche</button>
+            </div>
+        </article>
+
+        <!-- Prioridad 2 -->
+        <article class="priority-card">
+            <div class="priority-left">
+                <div class="mini-poster" style="background: linear-gradient(180deg, #1d4ed8, #1e3a8a);">
+                    <img src="{% static 'img/pastlives.png' %}" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <span class="service-label">Prime Video</span>
+            </div>
+            <div class="priority-right">
+                <span class="status-tag tag-urgent">🕒 Sale en 5 días</span>
+                <h3>Past Lives</h3>
+                <p class="meta-line">2023 · Película · Romance</p>
+                <p class="duration-line">🕒 1h 46m para terminar</p>
+                <button class="btn-secondary-dark">+ Ver esta noche</button>
+            </div>
+        </article>
+
+        <!-- Prioridad 3 -->
+        <article class="priority-card">
+            <div class="priority-left">
+                <div class="mini-poster" style="background: linear-gradient(180deg, #4b5563, #1f2937);">
+                    <img src="{% static 'img/arrival.png' %}" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <span class="service-label">Netflix</span>
+            </div>
+            <div class="priority-right">
+                <span class="status-tag tag-priority">⚑ Tu prioridad #1</span>
+                <h3>Arrival</h3>
+                <p class="meta-line">2016 · Película · Ciencia Ficción</p>
+                <p class="duration-line">🕒 1h 56m para terminar</p>
+                <button class="btn-secondary-dark">+ Ver esta noche</button>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}

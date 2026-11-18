@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Cabecera de Biblioteca -->
+<section class="hero-header">
+    <div class="hero-text">
+        <span class="eyebrow">TU COLECCIÓN, TODO EN UN MISMO LUGAR</span>
+        <h1>Mi biblioteca</h1>
+        <p>Cada historia que has guardado. Cada título que sigues teniendo en mente.</p>
+    </div>
+    <div>
+        <button class="btn-primary-orange btn-inline">+ Agregar título</button>
+    </div>
+</section>
+
+<!-- Layout Principal: Filtros (Izquierda) + Catálogo (Derecha) -->
+<section class="library-layout">
+    <!-- Barra Lateral de Filtros -->
+    <aside class="filters-sidebar">
+        <div class="filters-top">
+            <span>☰ Filtros</span>
+            <a href="#" class="reset-link">Limpiar</a>
+        </div>
+
+        <!-- Filtro: Estado -->
+        <div class="filter-group">
+            <h4>ESTADO</h4>
+            <ul class="filter-list">
+                <li class="filter-item active">
+                    <span><i class="check-box checked">✓</i> Todos los títulos</span>
+                    <span class="filter-count">74</span>
+                </li>
+                <li class="filter-item">
+                    <span><i class="check-box"></i> Viendo</span>
+                    <span class="filter-count">12</span>
+                </li>
+                <li class="filter-item">
+                    <span><i class="check-box"></i> Pendientes</span>
+                    <span class="filter-count">38</span>
+                </li>
+                <li class="filter-item">
+                    <span><i class="check-box"></i> Completados</span>
+                    <span class="filter-count">24</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Filtro: Plataforma -->
+        <div class="filter-group">
+            <h4>PLATAFORMA</h4>
+            <ul class="filter-list">
+                <li class="filter-item">
+                    <span><i class="check-box"></i> Netflix</span>
+                    <span class="filter-count">20</span>
+                </li>
+                <li class="filter-item">
+                    <span><i class="check-box"></i> Apple TV+</span>
+                    <span class="filter-count">10</span>
+                </li>
+                <li class="filter-item">
+                    <span><i class="check-box"></i> Hulu</span>
+                    <span class="filter-count">12</span>
+                </li>
+                <li class="filter-item">
+                    <span><i class="check-box"></i> Disney+</span>
+                    <span class="filter-count">13</span>
+                </li>
+                <li class="filter-item">
+                    <span><i class="check-box"></i> Max</span>
+                    <span class="filter-count">11</span>
+                </li>
+                <li class="filter-item">
+                    <span><i class="check-box"></i> Prime Video</span>
+                    <span class="filter-count">8</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Filtro: Género -->
+        <div class="filter-group">
+            <h4>GÉNERO</h4>
+            <div class="genre-pills">
+                <button class="genre-pill active">Todos</button>
+                <button class="genre-pill">Drama</button>
+                <button class="genre-pill">Ciencia Ficción</button>
+                <button class="genre-pill">Comedia</button>
+                <button class="genre-pill">Thriller</button>
+                <button class="genre-pill">Acción</button>
+                <button class="genre-pill">Romance</button>
+            </div>
+        </div>
+
+        <!-- Tarjeta Informativa Lateral -->
+        <div class="sidebar-note">
+            <span class="note-icon">🔖</span>
+            <h5>Las buenas historias se quedan contigo.</h5>
+            <p>Mantenlas todas en un solo lugar. 74 títulos. Infinitas posibilidades.</p>
+        </div>
+    </aside>
+
+    <!-- Área Principal del Catálogo -->
+    <div class="library-main">
+        <!-- Barra Superior de Pestañas y Ordenamiento -->
+        <div class="library-toolbar">
+            <div class="type-tabs">
+                <button class="type-tab active">Todos <span>74</span></button>
+                <button class="type-tab">Series <span>28</span></button>
+                <button class="type-tab">Películas <span>46</span></button>
+            </div>
+
+            <div class="sort-controls">
+                <span class="muted-small">Ordenar por</span>
+                <select class="filter-dropdown">
+                    <option>Agregados recientemente</option>
+                    <option>Mejor calificación</option>
+                    <option>Progreso (%)</option>
+                </select>
+                <div class="view-toggle">
+                    <button class="view-btn active" title="Vista cuadrícula">⊞</button>
+                    <button class="view-btn" title="Vista lista">☰</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuadrícula de 8 Tarjetas (4x2) -->
+        <div class="library-grid">
+            <!-- 1. Severance -->
+            <article class="lib-card">
+                <div class="lib-poster" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.7)), url('{% static "img/severance.png" %}') center/cover no-repeat;">
+                    <div class="poster-top-badges">
+                        <span class="rating-pill">★ 9.1</span>
+                        <span class="platform-badge">Apple TV+</span>
+                    </div>
+                    <span class="status-pill pill-watching">• Viendo</span>
+                </div>
+                <div class="lib-body">
+                    <h3>Severance</h3>
+                    <p class="lib-meta">Serie · Thriller · 2022</p>
+                    <div class="lib-progress-row">
+                        <span>T2 · 5 / 10 episodios</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 50%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. The Bear -->
+            <article class="lib-card">
+                <div class="lib-poster" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.7)), url('{% static "img/theBear.png" %}') center/cover no-repeat;">
+                    <div class="poster-top-badges">
+                        <span class="rating-pill">★ 8.6</span>
+                        <span class="platform-badge">hulu</span>
+                    </div>
+                    <span class="status-pill pill-watching">• Viendo</span>
+                </div>
+                <div class="lib-body">
+                    <h3>The Bear</h3>
+                    <p class="lib-meta">Serie · Drama · 2022</p>
+                    <div class="lib-progress-row">
+                        <span>T3 · 4 / 10 episodios</span>
+                        <span>40%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3. Shōgun -->
+            <article class="lib-card">
+                <div class="lib-poster" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.7)), url('{% static "img/shogun.png" %}') center/cover no-repeat;">
+                    <div class="poster-top-badges">
+                        <span class="rating-pill">★ 8.8</span>
+                        <span class="platform-badge">Disney+</span>
+                    </div>
+                    <span class="status-pill pill-watching">• Viendo</span>
+                </div>
+                <div class="lib-body">
+                    <h3>Shōgun</h3>
+                    <p class="lib-meta">Serie · Drama · 2024</p>
+                    <div class="lib-progress-row">
+                        <span>T1 · 7 / 10 episodios</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4. The Last of Us -->
+            <article class="lib-card">
+                <div class="lib-poster" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.7)), url('{% static "img/tlou.png" %}') center/cover no-repeat;">
+                    <div class="poster-top-badges">
+                        <span class="rating-pill">★ 8.7</span>
+                        <span class="platform-badge">max</span>
+                    </div>
+                    <span class="status-pill pill-watching">• Viendo</span>
+                </div>
+                <div class="lib-body">
+                    <h3>The Last of Us</h3>
+                    <p class="lib-meta">Serie · Drama · 2023</p>
+                    <div class="lib-progress-row">
+                        <span>T1 · 3 / 9 episodios</span>
+                        <span>33%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 33%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5. Dune: Part Two -->
+            <article class="lib-card">
+                <div class="lib-poster" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.7)), url('{% static "img/dune2.png" %}') center/cover no-repeat;">
+                    <div class="poster-top-badges">
+                        <span class="rating-pill">★ 8.5</span>
+                        <span class="platform-badge netflix-text">N</span>
+                    </div>
+                    <span class="status-pill pill-watchlist">❐ Pendiente</span>
+                </div>
+                <div class="lib-body">
+                    <h3>Dune: Part Two</h3>
+                    <p class="lib-meta">Película · Sci-Fi · 2024</p>
+                    <div class="lib-progress-row">
+                        <span>Sin iniciar · 2h 46m</span>
+                        <span>0%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6. Past Lives -->
+            <article class="lib-card">
+                <div class="lib-poster" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.7)), url('{% static "img/pastlives.png" %}') center/cover no-repeat;">
+                    <div class="poster-top-badges">
+                        <span class="rating-pill">★ 7.9</span>
+                        <span class="platform-badge">prime</span>
+                    </div>
+                    <span class="status-pill pill-watchlist">❐ Pendiente</span>
+                </div>
+                <div class="lib-body">
+                    <h3>Past Lives</h3>
+                    <p class="lib-meta">Película · Romance · 2023</p>
+                    <div class="lib-progress-row">
+                        <span>Sin iniciar · 1h 46m</span>
+                        <span>0%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 7. Arrival -->
+            <article class="lib-card">
+                <div class="lib-poster" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.7)), url('{% static "img/arrival.png" %}') center/cover no-repeat;">
+                    <div class="poster-top-badges">
+                        <span class="rating-pill">★ 7.9</span>
+                        <span class="platform-badge netflix-text">N</span>
+                    </div>
+                    <span class="status-pill pill-completed">✓ Completado</span>
+                </div>
+                <div class="lib-body">
+                    <h3>Arrival</h3>
+                    <p class="lib-meta">Película · Sci-Fi · 2016</p>
+                    <div class="lib-progress-row">
+                        <span>Vista · 1h 56m</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill fill-green" style="width: 100%;"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 8. Interstellar -->
+            <article class="lib-card">
+                <div class="lib-poster" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.7)), url('{% static "img/interstellar.png" %}') center/cover no-repeat;">
+                    <div class="poster-top-badges">
+                        <span class="rating-pill">★ 8.7</span>
+                        <span class="platform-badge">prime</span>
+                    </div>
+                    <span class="status-pill pill-completed">✓ Completado</span>
+                </div>
+                <div class="lib-body">
+                    <h3>Interstellar</h3>
+                    <p class="lib-meta">Película · Sci-Fi · 2014</p>
+                    <div class="lib-progress-row">
+                        <span>Vista · 2h 49m</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill fill-green" style="width: 100%;"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Paginación Inferior -->
+        <div class="pagination-bar">
+            <span class="muted-small">Mostrando 1–8 de 74 títulos</span>
+            <div class="page-buttons">
+                <button class="page-btn" disabled>‹</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span class="page-dots">...</span>
+                <button class="page-btn">›</button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
